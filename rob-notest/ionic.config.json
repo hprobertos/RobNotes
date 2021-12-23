@@ -1,0 +1,7 @@
+{
+  "name": "rob-notest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
