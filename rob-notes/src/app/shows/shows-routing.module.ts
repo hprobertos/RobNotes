@@ -6,7 +6,11 @@ const routes: Routes = [
   {
     path: '',
     component: ShowsPage,
+  },  {
+    path: 'sections',
+    loadChildren: () => import('./sections/sections.module').then( m => m.SectionsPageModule)
   }
+
 ];
 
 @NgModule({
