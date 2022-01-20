@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: SectionsPage
+  },  {
+    path: 'backlog',
+    loadChildren: () => import('./backlog/backlog.module').then( m => m.BacklogPageModule)
   }
+
 ];
 
 @NgModule({

@@ -8,51 +8,35 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'movies',
-        loadChildren: () => import('../movies/movies.module').then(m => m.MoviesPageModule)
-      },
-      {
-        path: 'movies/:section',
-        loadChildren: () => import('../movies/movies.module').then(m => m.MoviesPageModule)
-      },
-      {
         path: 'movies/sections',
         loadChildren: () => import('../movies/sections/sections.module').then(m => m.SectionsPageModule)
       },
       {
-        path: 'shows',
-        loadChildren: () => import('../shows/shows.module').then(m => m.ShowsPageModule)
-      },
-      {
-        path: 'shows/:section',
-        loadChildren: () => import('../shows/shows.module').then(m => m.ShowsPageModule)
+        path: 'movies/sections/:section',
+        loadChildren: () => import('../movies/sections/sections.module').then(m => m.SectionsPageModule)
       },
       {
         path: 'shows/sections',
         loadChildren: () => import('../shows/sections/sections.module').then(m => m.SectionsPageModule)
       },
       {
-        path: 'books',
-        loadChildren: () => import('../books/books.module').then(m => m.BooksPageModule)
-      },
-      {
-        path: 'books/:section',
-        loadChildren: () => import('../books/books.module').then(m => m.BooksPageModule)
+        path: 'shows/sections/:section',
+        loadChildren: () => import('../shows/sections/sections.module').then(m => m.SectionsPageModule)
       },
       {
         path: 'books/sections',
         loadChildren: () => import('../books/sections/sections.module').then(m => m.SectionsPageModule)
       },
       {
-        path: 'games',
-        loadChildren: () => import('../games/games.module').then(m => m.GamesPageModule)
-      },
-      {
-        path: 'games/:section',
-        loadChildren: () => import('../games/games.module').then(m => m.GamesPageModule)
+        path: 'books/sections/:section',
+        loadChildren: () => import('../books/sections/sections.module').then(m => m.SectionsPageModule)
       },
       {
         path: 'games/sections',
+        loadChildren: () => import('../games/sections/sections.module').then(m => m.SectionsPageModule)
+      },
+      {
+        path: 'games/sections/:section',
         loadChildren: () => import('../games/sections/sections.module').then(m => m.SectionsPageModule)
       },
       {

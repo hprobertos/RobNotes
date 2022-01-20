@@ -7,7 +7,15 @@ const routes: Routes = [
   {
     path: '',
     component: SectionsPage
+  },  {
+    path: 'in-progress',
+    loadChildren: () => import('./in-progress/in-progress.module').then( m => m.InProgressPageModule)
+  },
+  {
+    path: 'backlog',
+    loadChildren: () => import('./backlog/backlog.module').then( m => m.BacklogPageModule)
   }
+
 ];
 
 @NgModule({

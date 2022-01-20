@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title size="large">Books <ion-icon name=book-outline></ion-icon></ion-title>
+    <ion-title size="small">Backlog <ion-icon name=library-outline></ion-icon></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Books</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-button slot="end" color="primary" (click)="addAlert()">Add new book</ion-button>
+  </ion-item>
+
+  <ion-list>
+    <ion-reorder-group (ionItemReorder)="reorderBacklogList($event)" disabled="false">
+      <ion-item class="book-item" *ngFor="let book of backlogList; let i = index;">
+        <ion-label>{{book.name}} <p>Chapters: {{book.totalChapters}}</p></ion-label>
+          <ion-button size="small" color="medium" (click)="editAlert(book.name, book.totalChapters)">Edit</ion-button>
+          <ion-button size="small" (click)="moveAlert()">Move</ion-button>
+          <ion-button size="small" color="danger" (click)="deleteAlert(book)">Delete</ion-button>
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+    </ion-reorder-group>
+  </ion-list>
+</ion-content>

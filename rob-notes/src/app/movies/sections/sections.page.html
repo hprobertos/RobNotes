@@ -5,41 +5,10 @@
 </ion-header>
 
 <ion-content>
-
-  <!-- <ion-list-header>
+  <ion-item detail routerLink="{{section.path}}" *ngFor="let section of sections">
+    <ion-icon slot="start" name="{{section.icon}}"></ion-icon>
     <ion-label>
-      Books
+      {{section.name}}
     </ion-label>
-  </ion-list-header> -->
-    <ion-item detail routerLink="/tabs/movies/in-progress">
-      <ion-icon slot="start" name="eye-outline"></ion-icon>
-      <ion-label>
-        In-Progress
-      </ion-label>
-    </ion-item>
-    <ion-item detail routerLink="/tabs/movies/stand-by">
-      <ion-icon slot="start" name="pause-circle-outline"></ion-icon>
-      <ion-label>
-        Stand-By
-      </ion-label>
-    </ion-item>
-    <ion-item detail routerLink="/tabs/movies/backlog">
-      <ion-icon slot="start" name="library-outline"></ion-icon>
-      <ion-label>
-        Backlog
-      </ion-label>
-    </ion-item>
-    <ion-item detail routerLink="/tabs/movies/waiting">
-      <ion-icon slot="start" name="calendar-outline"></ion-icon>
-      <ion-label>
-        Waiting
-      </ion-label>
-    </ion-item>
-    <ion-item detail routerLink="/tabs/movies/finished">
-      <ion-icon slot="start" name="star-outline"></ion-icon>
-      <ion-label>
-        Finished
-      </ion-label>
-    </ion-item>
-
+  </ion-item>
 </ion-content>

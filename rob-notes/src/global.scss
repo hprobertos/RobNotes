@@ -24,3 +24,13 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+// Alert
+.alert-delete-button {
+    color:#e74c3c !important;
+}
+
+// Toast
+.toast-deleted {
+    color:#e74c3c !important;
+}
